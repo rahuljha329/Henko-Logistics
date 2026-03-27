@@ -9,6 +9,7 @@ import { Routes, Route } from 'react-router-dom'  // Import Route from react-rou
 import AirFreightPage from './Pages/AirFreightPage'
 import SeaFreightPage from './Pages/SeaFreightPage'
 import AboutPage from './Pages/AboutPage' 
+import ContactPage from './Pages/ContactPage' 
 import WareHousingSolutionPage from './Pages/WareHousingSolutionPage'
 import ExpressDeliveryPage from './Pages/ExpressDeliveryPage'
 import TransportPage from './Pages/TransportPage'
@@ -29,6 +30,7 @@ function App() {
         <Route path='/service-transport' element={<TransportPage />} />
 
         <Route path='/about' element={<AboutPage />} />
+        <Route path='/contact' element={<ContactPage />} />
       </Routes>
     </>
   )
