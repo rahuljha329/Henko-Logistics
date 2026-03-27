@@ -41,13 +41,13 @@ const Navbar = () => {
     { name: "Transport", link: "/service-transport", icon: TruckIcon },
   ];
 
-  // Tracking dropdown items
+  
   const trackingItems = [
     { name: "Air Freight Tracking", link: "/tracking/air-freight", icon: Plane },
     { name: "Sea Freight Tracking", link: "/tracking/sea-freight", icon: Ship },
   ];
 
-  // Resources dropdown items
+  
   const resourceItems = [
     { name: "Incoterms", link: "/resources/incoterms", icon: BookOpen, description: "International trade terms" },
     { name: "Metric Conversion", link: "/resources/metric-conversion", icon: Scale, description: "Convert units instantly" },
