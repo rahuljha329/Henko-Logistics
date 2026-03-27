@@ -51,7 +51,7 @@ const Navbar = () => {
   const resourceItems = [
     { name: "Incoterms", link: "/resources/incoterms", icon: BookOpen, description: "International trade terms" },
     { name: "Metric Conversion", link: "/resources/metric-conversion", icon: Scale, description: "Convert units instantly" },
-    { name: "Container Specifications", link: "/resources/container-specs", icon: Package, description: "Container types & sizes" },
+    { name: "Container Specifications", link: "/Resources/ContainerSpecifications", icon: Package, description: "Container types & sizes" },
     { name: "Shipping Glossary", link: "/resources/shipping-glossary", icon: BookOpen, description: "Shipping terms explained" },
     { name: "Currency Converter", link: "/resources/currency-converter", icon: Calculator, description: "Live exchange rates" },
     { name: "World Sea Ports", link: "/resources/world-ports", icon: Anchor, description: "Global port directory" },
