@@ -3,13 +3,15 @@ import { Mail, Phone, MapPin, FileText } from "lucide-react";
 
 export default function AirFreightContent() {
   const [open, setOpen] = useState(0);
+  const [activeService, setActiveService] = useState(0); // 👈 NEW
 
   const services = [
-    "Air Freight",
-    "Sea Freight",
-    "3PL Logistics ",
-    "Clearance",
-    "Transport",
+    { name: "Air Freight", link: "/service-air-freight" },
+    { name: "Sea Freight", link: "/service-sea-freight" },
+    { name: "Warehousing Solutions", link: "/service-warehousing" },
+    { name: "Express Delivery", link: "/service-express" },
+    { name: "Clearance", link: "/service-clearance" },
+    { name: "Transport", link: "/service-transport" },
   ];
 
   const faqs = [
@@ -20,6 +22,14 @@ export default function AirFreightContent() {
     {
       q: "How can i track my shipments?",
       a: "You can track shipments in real-time using our tracking system."
+    },
+    {
+      q: "How long does air freight delivery take?",
+      a: "Delivery typically takes 1–5 days depending on destination and service type."
+    },
+    {
+      q: "Is air freight expensive?",
+      a: "It is costlier than sea freight but ideal for urgent and high-value shipments."
     }
   ];
 
@@ -38,20 +48,24 @@ export default function AirFreightContent() {
 
             <div className="p-4 space-y-2">
               {services.map((item, i) => (
-                <div
+                <a
                   key={i}
-                  className={`flex justify-between items-center px-4 py-3 rounded cursor-pointer ${
-                    i === 0
+                  href={item.link} // 👈 link added
+                  onClick={() => setActiveService(i)} // 👈 active change
+                  className={`flex justify-between items-center px-4 py-3 rounded cursor-pointer transition ${
+                    activeService === i
                       ? "bg-[#f94735] text-white"
-                      : "bg-gray-100 hover:bg-gray-200"
+                      : "bg-gray-100 hover:bg-gray-200 text-gray-700"
                   }`}
                 >
-                  {item}
+                  {item.name}
                   <span>→</span>
-                </div>
+                </a>
               ))}
             </div>
           </div>
+
+          {/* बाकी code same hai ↓ */}
 
           {/* Contact Info */}
           <div className="bg-white shadow rounded">
@@ -130,10 +144,13 @@ export default function AirFreightContent() {
               Warehousing
             </h2>
             <p className="text-gray-500 mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+             Air freight is the fastest and most reliable way to move goods across long distances, ensuring timely delivery for urgent and high-value shipments. Our air freight services are designed to provide seamless logistics solutions with global coverage, advanced tracking systems, and efficient handling at every stage of the journey.
+            </p>
+            <p className="text-gray-500 mb-4">
+                We work with a strong network of airline partners to offer flexible scheduling, competitive pricing, and priority cargo handling. Whether it’s small parcels or large commercial consignments, we ensure your shipments are delivered safely, securely, and on time. Our team manages everything from documentation and customs clearance to final delivery, giving you a hassle-free experience.
             </p>
             <p className="text-gray-500">
-              Contrary to popular belief, Lorem Ipsum is not simply random text...
+              With a focus on speed, accuracy, and customer satisfaction, our air freight solutions are ideal for businesses that demand efficiency and reliability. We continuously optimize our processes to reduce transit times and ensure your cargo reaches its destination without delays.
             </p>
           </div>
 
@@ -167,31 +184,59 @@ export default function AirFreightContent() {
 
           {/* Paragraph */}
           <p className="text-gray-500">
-            Ut enim ad minim veniam quis nostrud exercitation ullamco laboris...
+            We understand the importance of time-sensitive deliveries in today’s fast-paced world. Our air freight services are tailored to meet urgent shipping needs while maintaining the highest standards of safety and quality. From pickup to final delivery, we ensure complete transparency and real-time updates for your peace of mind.
           </p>
 
           {/* FAQ */}
-          <div className="bg-white rounded shadow">
-            {faqs.map((item, i) => (
-              <div key={i} className="border-b">
-                <button
-                  onClick={() => setOpen(open === i ? null : i)}
-                  className="w-full text-left p-4 flex justify-between items-center"
-                >
-                  <span className="font-semibold text-[#0e1d34]">
-                    {item.q}
-                  </span>
-                  <span className="text-[#f94735]">
-                    {open === i ? "-" : "+"}
-                  </span>
-                </button>
+          <h3 className="text-2xl font-bold text-[#0e1d34] mb-4">
+  Frequently Asked Questions
+</h3>
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+  {faqs.map((item, i) => {
+    const isActive = open === i;
 
-                {open === i && (
-                  <p className="p-4 text-gray-500">{item.a}</p>
-                )}
-              </div>
-            ))}
+    return (
+      <div key={i} className="border-b last:border-none">
+        <button
+          onClick={() => setOpen(isActive ? null : i)}
+          className={`w-full flex justify-between items-center p-5 text-left transition ${
+            isActive ? "bg-[#f94735]/10" : "hover:bg-gray-50"
+          }`}
+        >
+          <span
+            className={`font-semibold text-base md:text-lg ${
+              isActive ? "text-[#f94735]" : "text-[#0e1d34]"
+            }`}
+          >
+            {item.q}
+          </span>
+
+          {/* Icon */}
+          <div
+            className={`w-8 h-8 flex items-center justify-center rounded-full border transition-all duration-300 ${
+              isActive
+                ? "bg-[#f94735] text-white rotate-180"
+                : "text-[#0e1d34]"
+            }`}
+          >
+            +
           </div>
+        </button>
+
+        {/* Answer with animation */}
+        <div
+          className={`px-5 overflow-hidden transition-all duration-300 ${
+            isActive ? "max-h-40 pb-5" : "max-h-0"
+          }`}
+        >
+          <p className="text-gray-500 leading-relaxed">
+            {item.a}
+          </p>
+        </div>
+      </div>
+    );
+  })}
+</div>
 
         </div>
       </div>
