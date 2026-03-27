@@ -31,7 +31,7 @@ const Navbar = () => {
     { name: 'Blog', href: '/blog' },
   ];
 
-  // Services dropdown items
+  
   const serviceItems = [
     { name: "Air Freight", link: "/service-air-freight", icon: Plane },
     { name: "Sea Freight", link: "/service-sea-freight", icon: Ship },
@@ -73,7 +73,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
-      {/* Top Bar */}
+     
       <div className="hidden lg:block text-white text-sm py-2" style={{ backgroundColor: colors.secondary }}>
         <div className="max-w-7xl mx-auto px-4 flex justify-between">
           <div className="flex space-x-6">
@@ -93,7 +93,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Main Navbar */}
+     
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-20">
           {/* Logo with imported images */}
