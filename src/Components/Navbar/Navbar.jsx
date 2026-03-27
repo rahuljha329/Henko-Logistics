@@ -25,7 +25,7 @@ const Navbar = () => {
     { name: "Sea Freight", link: "/service-sea-freight" },
     { name: "Warehousing Solutions", link: "/service-warehousing-solutions" },
     { name: "Express Delivery", link: "/service-express" },
-    { name: "Clearance", link: "/service-clearance" },
+   
     { name: "Transport", link: "/service-transport" },
   ];
 
