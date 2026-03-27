@@ -36,6 +36,11 @@ const Footer = () => {
   ];
 
   const socialLinks = [
+
+
+
+
+    
     { icon: FaFacebookF, href: '#' },
     { icon: FaTwitter, href: '#' },
     { icon: FaLinkedinIn, href: '#' },
