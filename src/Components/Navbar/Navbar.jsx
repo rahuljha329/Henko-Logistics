@@ -5,10 +5,9 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
 
-  // Color scheme
   const colors = {
-    primary: '#f94735', // Orange
-    secondary: '#0e1d34', // Dark Blue
+    primary: '#f94735',
+    secondary: '#0e1d34', 
   };
 
   const navLinks = [
@@ -30,14 +29,13 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
-      {/* Top Bar - with secondary color */}
       <div className="hidden lg:block text-white text-sm py-2" style={{ backgroundColor: colors.secondary }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
-                <span>+91 1800 123 4567</span>
+                <span>+91 0000000000</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Clock className="w-4 h-4" />
@@ -56,23 +54,20 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Main Navbar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo Section */}
           <div className="flex items-center space-x-2">
             <div className="p-2 rounded-lg" style={{ backgroundColor: colors.primary }}>
               <Truck className="w-7 h-7 text-white" />
             </div>
             <div>
               <h1 className="text-2xl font-bold" style={{ color: colors.secondary }}>
-                SHIKHAR
+                LOGISTIC
               </h1>
               <p className="text-xs text-gray-500 tracking-wide">SIMPLIFYING LOGISTICS</p>
             </div>
           </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1 lg:space-x-2">
             {navLinks.map((link) => (
               <div key={link.name} className="relative group">
@@ -124,12 +119,10 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Contact Button & CTA */}
           <div className="hidden md:flex items-center space-x-3">
             <button 
               className="text-white px-5 py-2.5 rounded-lg font-semibold transition duration-300 transform hover:scale-105 shadow-md flex items-center space-x-2"
-              style={{ backgroundColor: colors.primary }}
-            >
+              style={{ backgroundColor: colors.primary }}>
               <Phone className="w-4 h-4" />
               <span>Contact Us</span>
             </button>
@@ -209,11 +202,10 @@ const Navbar = () => {
                 </button>
               </div>
               
-              {/* Mobile Additional Info */}
               <div className="pt-4 space-y-2 text-sm border-t border-gray-100 mt-2">
                 <div className="flex items-center space-x-2" style={{ color: colors.secondary }}>
                   <Phone className="w-4 h-4" />
-                  <span>+91 1800 123 4567</span>
+                  <span>+91 00000000000</span>
                 </div>
                 <div className="flex items-center space-x-2" style={{ color: colors.secondary }}>
                   <Clock className="w-4 h-4" />
@@ -229,7 +221,6 @@ const Navbar = () => {
         )}
       </div>
 
-      {/* Custom CSS for hover effects */}
       <style jsx>{`
         @keyframes fadeIn {
           from {
