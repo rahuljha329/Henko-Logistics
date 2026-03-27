@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X, Truck, ChevronDown, MapPin, Clock, Phone } from 'lucide-react';
 
 const Navbar = () => {
@@ -120,12 +121,15 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:flex items-center space-x-3">
-            <button 
-              className="text-white px-5 py-2.5 rounded-lg font-semibold transition duration-300 transform hover:scale-105 shadow-md flex items-center space-x-2"
-              style={{ backgroundColor: colors.primary }}>
-              <Phone className="w-4 h-4" />
-              <span>Contact Us</span>
-            </button>
+            <Link to="/contact">
+  <button 
+    className="text-white px-5 py-2.5 rounded-lg font-semibold transition duration-300 transform hover:scale-105 shadow-md flex items-center space-x-2"
+    style={{ backgroundColor: "#0e1d34" }} // Aapka primary blue color
+  >
+    <Phone className="w-4 h-4" />
+    <span>Contact Us</span>
+  </button>
+</Link>
             <button 
               className="px-5 py-2.5 rounded-lg font-semibold transition duration-300"
               style={{ border: `2px solid ${colors.primary}`, color: colors.primary }}
