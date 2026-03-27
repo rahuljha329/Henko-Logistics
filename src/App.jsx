@@ -9,6 +9,7 @@ import { Routes, Route } from 'react-router-dom'  // Import Route from react-rou
 import AirFreightPage from './Pages/AirFreightPage'
 import SeaFreightPage from './Pages/SeaFreightPage'
 import AboutPage from './Pages/AboutPage' 
+import ContactPage from './Pages/ContactPage' 
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
 
 
         <Route path='/about' element={<AboutPage />} />
+        <Route path='/contact' element={<ContactPage />} />
       </Routes>
     </>
   )
