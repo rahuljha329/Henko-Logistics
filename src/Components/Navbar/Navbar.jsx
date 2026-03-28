@@ -408,13 +408,6 @@ const Navbar = () => {
 
 
   const navLinks = [
-<<<<<<< HEAD
-    { name: 'Home', href: '/Home' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Services', href: '/services', hasDropdown: true },
-    { name: 'Resource', href: '/resource' },
-    { name: 'Blog', href: '/blog' },
-=======
 
     { name: "Home", href: "/" },
 
@@ -426,7 +419,6 @@ const Navbar = () => {
 
     { name: "Blog", href: "/blog" },
 
->>>>>>> cd91efda9e38995a3fa604021d8e8f06d0bede86
   ];
 
 
