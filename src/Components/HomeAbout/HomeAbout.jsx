@@ -28,7 +28,7 @@ const HomeAbout = () => {
             {/* Description */}
             <p className="text-gray-600 text-lg leading-relaxed max-w-xl">
               We provide advanced logistics solutions with smart tracking and efficient delivery systems.  
-              Our technology-driven approach ensures faster, safer, and more reliable transportation worldwide.
+              Our technology-driven approach ensures faster, safe safer, and more reliable transportation worldwide.
             </p>
 
             {/* Features */}
