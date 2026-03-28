@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Users, Briefcase, Globe, Award, CheckCircle2 } from 'lucide-react';
+import cargoImg from "../../assets/homeus.png";
 
-// Custom Counter Component for the stats
 const CountUp = ({ end, duration = 2000, suffix = "" }) => {
   const [count, setCount] = useState(0);
   const countRef = useRef(null);
@@ -50,7 +50,6 @@ const CountUp = ({ end, duration = 2000, suffix = "" }) => {
 };
 
 const HomeWhyChooseUs = () => {
-  // Stats data for the bottom cards
   const stats = [
     {
       id: 1,
@@ -86,25 +85,20 @@ const HomeWhyChooseUs = () => {
     }
   ];
 
-  const cargoShipImg = "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&q=80&w=800";
-
   return (
     <section className="relative overflow-hidden bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8 font-sans">
-      {/* Decorative Background Elements */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-[#f94735] opacity-[0.03] rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#0e1d34] opacity-[0.03] rounded-full translate-x-1/4 translate-y-1/4 blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Main Content Row */}
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 mb-24">
           
-          {/* Image Side */}
           <div className="relative w-full lg:w-1/2 flex justify-center lg:justify-start">
             <div className="relative w-full max-w-[500px] aspect-[4/5]">
               <div className="w-full h-full overflow-hidden rounded-3xl shadow-2xl border-8 border-white relative z-10 group">
                 <img 
-                  src={cargoShipImg}
-                  alt="Global Logistics Shipping"
+                  src={cargoImg}
+                  alt="Logistics"
                   className="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0e1d34]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -114,7 +108,6 @@ const HomeWhyChooseUs = () => {
             </div>
           </div>
 
-          {/* Content Side */}
           <div className="w-full lg:w-1/2 space-y-8">
             <div className="inline-block px-4 py-1.5 bg-orange-50 border border-orange-100 rounded-full">
               <span className="text-[#f94735] text-sm font-bold tracking-wider uppercase">Why Choose Us</span>
@@ -131,7 +124,6 @@ const HomeWhyChooseUs = () => {
               From sea freight to global distribution, we provide robust and reliable transport solutions. Our logistics network ensures your cargo moves across borders with maximum efficiency and safety.
             </p>
 
-            {/* Feature List */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8 mt-6">
               {['Express Shipping', 'Secure Warehousing', 'Real-time Tracking', 'Global Coverage'].map((feature, i) => (
                 <div key={i} className="flex items-center gap-3 group">
@@ -142,12 +134,9 @@ const HomeWhyChooseUs = () => {
                 </div>
               ))}
             </div>
-
-            {/* Bottom CTA Area Removed as per request */}
           </div>
         </div>
 
-        {/* Stats Section with Counter */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-16 border-t border-gray-100">
           {stats.map((stat) => (
             <div 
