@@ -65,9 +65,9 @@ export default function AirFreightContent() {
             </div>
           </div>
 
-          {/* बाकी code same hai ↓ */}
+         
 
-          {/* Contact Info */}
+        
           <div className="bg-white shadow rounded">
             <h3 className="bg-[#0e1d34] text-white p-4 font-semibold">
               CONTACT INFO
@@ -100,7 +100,7 @@ export default function AirFreightContent() {
             </div>
           </div>
 
-          {/* Brochures */}
+         
           <div className="bg-white shadow rounded">
             <h3 className="bg-[#0e1d34] text-white p-4 font-semibold">
               BROCHURES
@@ -119,7 +119,7 @@ export default function AirFreightContent() {
             </div>
           </div>
 
-          {/* Help Box */}
+        
           <div className="bg-[#0e1d34] text-white p-6 rounded text-center">
             <h3 className="text-lg font-bold mb-4">How Can We Help?</h3>
             <p className="text-sm mb-2">📞 (+44) 123 456 789</p>
@@ -128,17 +128,17 @@ export default function AirFreightContent() {
 
         </div>
 
-        {/* ================= RIGHT CONTENT ================= */}
+       
         <div className="md:col-span-2 space-y-8">
 
-          {/* Image */}
+         
           <img
             src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?w=2400&q=80"
             className="w-full h-[520px] object-cover rounded"
             alt="warehouse"
           />
 
-          {/* Title + Text */}
+         
           <div>
             <h2 className="text-2xl font-bold text-[#0e1d34] mb-3">
               Warehousing
@@ -154,7 +154,7 @@ export default function AirFreightContent() {
             </p>
           </div>
 
-          {/* Feature Cards */}
+         
           <div className="grid md:grid-cols-2 gap-6">
             {[1, 2].map((item, i) => (
               <div
@@ -182,12 +182,12 @@ export default function AirFreightContent() {
             ))}
           </div>
 
-          {/* Paragraph */}
+        
           <p className="text-gray-500">
             We understand the importance of time-sensitive deliveries in today’s fast-paced world. Our air freight services are tailored to meet urgent shipping needs while maintaining the highest standards of safety and quality. From pickup to final delivery, we ensure complete transparency and real-time updates for your peace of mind.
           </p>
 
-          {/* FAQ */}
+         
           <h3 className="text-2xl font-bold text-[#0e1d34] mb-4">
   Frequently Asked Questions
 </h3>
@@ -211,7 +211,7 @@ export default function AirFreightContent() {
             {item.q}
           </span>
 
-          {/* Icon */}
+        
           <div
             className={`w-8 h-8 flex items-center justify-center rounded-full border transition-all duration-300 ${
               isActive
@@ -223,7 +223,7 @@ export default function AirFreightContent() {
           </div>
         </button>
 
-        {/* Answer with animation */}
+      
         <div
           className={`px-5 overflow-hidden transition-all duration-300 ${
             isActive ? "max-h-40 pb-5" : "max-h-0"
