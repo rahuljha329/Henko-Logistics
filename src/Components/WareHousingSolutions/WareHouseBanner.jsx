@@ -1,13 +1,13 @@
 import React from "react";
 import { ShoppingCart, Layers } from "lucide-react";
 
-export default function SeaFreightBanner() {
+export default function WareHouseBanner() {
   return (
     <div className="relative w-full h-[320px] md:h-[420px] overflow-hidden">
       
       {/* Background Image */}
       <img
-        src="https://images.pexels.com/photos/1544372/pexels-photo-1544372.jpeg"
+        src="https://images.pexels.com/photos/36003983/pexels-photo-36003983.jpeg"
         alt="Sea Freight"
         loading="eager"
         className="absolute inset-0 w-full h-full object-cover object-center scale-105"
@@ -20,7 +20,7 @@ export default function SeaFreightBanner() {
       <div className="relative z-10 flex flex-col justify-center h-full px-6 md:px-16">
         
         <h1 className="text-white text-4xl md:text-6xl font-bold leading-tight">
-          Sea Freight
+          Ware Housing Solution
         </h1>
 
         <div className="flex items-center gap-3 mt-4 text-sm md:text-base">
@@ -31,7 +31,7 @@ export default function SeaFreightBanner() {
           <span className="text-[#f94735]">—</span>
 
           <span className="text-gray-300">
-          Sea Freight
+           Ware Housing Solution
           </span>
         </div>
       </div>
