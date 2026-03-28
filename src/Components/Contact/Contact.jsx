@@ -6,20 +6,8 @@ const Contact = () => {
     <section className="py-16 px-6 md:px-12 lg:px-24 bg-white">
       <div className="max-w-7xl mx-auto">
         
-        <div className="w-full h-[400px] mb-12 rounded-xl overflow-hidden shadow-lg border border-gray-100">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m24!1m8!1m3!1d112143.90715665747!2d77.313412!3d28.554832!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x390ce77e7352986d%3A0xf4f8800ea7deb9ad!2sThe%20Bharat%20Homes%2C%20Shop%20no%208%20B%2C%20Lotus%20300%20Club%2C%20Sector%20107%2C%20Noida%2C%20Uttar%20Pradesh%20201304!3m2!1d28.544107099999998!2d77.37518469999999!4m5!1s0x390ce3c55fcb6929%3A0xc1915416d869c7ed!2sHemkunt%20Chambers%2C%20Nehru%20Pl%20Market%20Rd%2C%20Nehru%20Place%2C%20New%20Delhi%2C%20Delhi%20110019!3m2!1d28.5476618!2d77.2522895!5e0!3m2!1sen!2sin!4v1774606658673!5m2!1sen!2sin" 
-            width="100%" 
-            height="100%" 
-            style={{ border: 0 }} 
-            allowFullScreen="" 
-            loading="lazy" 
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Office Location"
-          ></iframe>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        {/* Contact Form Section - Now on Top */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-12">
           
           {/* Contact Info Cards */}
           <div className="lg:col-span-1 space-y-6">
@@ -110,6 +98,21 @@ const Contact = () => {
           </div>
 
         </div>
+
+        {/* Map Section - Now Below */}
+        <div className="w-full h-[400px] rounded-xl overflow-hidden shadow-lg border border-gray-100">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m24!1m8!1m3!1d112143.90715665747!2d77.313412!3d28.554832!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x390ce77e7352986d%3A0xf4f8800ea7deb9ad!2sThe%20Bharat%20Homes%2C%20Shop%20no%208%20B%2C%20Lotus%20300%20Club%2C%20Sector%20107%2C%20Noida%2C%20Uttar%20Pradesh%20201304!3m2!1d28.544107099999998!2d77.37518469999999!4m5!1s0x390ce3c55fcb6929%3A0xc1915416d869c7ed!2sHemkunt%20Chambers%2C%20Nehru%20Pl%20Market%20Rd%2C%20Nehru%20Place%2C%20New%20Delhi%2C%20Delhi%20110019!3m2!1d28.5476618!2d77.2522895!5e0!3m2!1sen!2sin!4v1774606658673!5m2!1sen!2sin" 
+            width="100%" 
+            height="100%" 
+            style={{ border: 0 }} 
+            allowFullScreen="" 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Office Location"
+          ></iframe>
+        </div>
+
       </div>
     </section>
   );
