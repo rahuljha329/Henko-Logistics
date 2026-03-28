@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Mail, Phone, MapPin, FileText } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 export default function TransportContent() {
   const [open, setOpen] = useState(0);
-  const [activeService, setActiveService] = useState(0); // 👈 NEW
+  const location = useLocation(); // ✅ added
 
   const services = [
     { name: "Air Freight", link: "/service-air-freight" },
@@ -46,25 +47,26 @@ export default function TransportContent() {
             </h3>
 
             <div className="p-4 space-y-2">
-              {services.map((item, i) => (
-                <a
-                  key={i}
-                  href={item.link} // 👈 link added
-                  onClick={() => setActiveService(i)} // 👈 active change
-                  className={`flex justify-between items-center px-4 py-3 rounded cursor-pointer transition ${
-                    activeService === i
-                      ? "bg-[#f94735] text-white"
-                      : "bg-gray-100 hover:bg-gray-200 text-gray-700"
-                  }`}
-                >
-                  {item.name}
-                  <span>→</span>
-                </a>
-              ))}
+              {services.map((item, i) => {
+                const isActive = location.pathname === item.link;
+
+                return (
+                  <Link
+                    key={i}
+                    to={item.link}
+                    className={`flex justify-between items-center px-4 py-3 rounded transition ${
+                      isActive
+                        ? "bg-[#f94735] text-white"
+                        : "bg-gray-100 hover:bg-gray-200 text-gray-700"
+                    }`}
+                  >
+                    {item.name}
+                    <span>→</span>
+                  </Link>
+                );
+              })}
             </div>
           </div>
-
-          {/* बाकी code same hai ↓ */}
 
           {/* Contact Info */}
           <div className="bg-white shadow rounded">
@@ -140,34 +142,32 @@ export default function TransportContent() {
           {/* Title + Text */}
           <div>
             <h2 className="text-2xl font-bold text-[#0e1d34] mb-3">
-             Transport
+              Transport
             </h2>
+
             <p className="text-gray-500 mb-4">
-             Transport services are a vital part of the logistics chain, ensuring the smooth movement of goods from one location to another. Efficient transportation helps businesses maintain timely deliveries, reduce costs, and improve overall supply chain performance. With the right transport network, goods can be delivered safely and on schedule across cities and regions.
+              Transport services are a vital part of the logistics chain, ensuring the smooth movement of goods from one location to another.
             </p>
+
             <p className="text-gray-500 mb-4">
-                Our transport services are designed to provide reliable and flexible solutions for all types of cargo. Whether it’s small shipments or bulk consignments, we offer a wide range of vehicles and transport options to meet your specific requirements. Our strong network enables seamless delivery across local, regional, and national routes.
+              Our transport services are designed to provide reliable and flexible solutions for all types of cargo.
             </p>
+
             <p className="text-gray-500">
-              We focus on safety, efficiency, and timely delivery in every operation. Our experienced drivers, well-maintained fleet, and optimized route planning ensure that your goods reach their destination without delays or damage. We also provide real-time tracking so you can stay updated on your shipment status.
+              We focus on safety, efficiency, and timely delivery in every operation.
             </p>
           </div>
 
           {/* Feature Cards */}
           <div className="grid md:grid-cols-2 gap-6">
             {[1, 2].map((item, i) => (
-              <div
-                key={i}
-                className="bg-white p-8 rounded shadow text-center"
-              >
+              <div key={i} className="bg-white p-8 rounded shadow text-center">
                 <div className="w-14 h-14 mx-auto border rounded-full flex items-center justify-center text-[#0e1d34] font-bold">
                   {`0${i + 1}`}
                 </div>
 
                 <h3 className="font-semibold mt-4">
-                  {i === 0
-                    ? "Packaging & Storage"
-                    : "Safety & Quality"}
+                  {i === 0 ? "Packaging & Storage" : "Safety & Quality"}
                 </h3>
 
                 <p className="text-gray-500 text-sm mt-2">
@@ -181,61 +181,53 @@ export default function TransportContent() {
             ))}
           </div>
 
-          {/* Paragraph */}
-          <p className="text-gray-500">
-            In addition to transportation, we offer customized solutions such as scheduled deliveries, dedicated transport services, and last-mile delivery support. Our goal is to simplify your logistics operations and provide a hassle-free transport experience tailored to your business needs.
-          </p>
-
           {/* FAQ */}
           <h3 className="text-2xl font-bold text-[#0e1d34] mb-4">
-  Frequently Asked Questions
-</h3>
+            Frequently Asked Questions
+          </h3>
+
           <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-  {faqs.map((item, i) => {
-    const isActive = open === i;
+            {faqs.map((item, i) => {
+              const isActive = open === i;
 
-    return (
-      <div key={i} className="border-b last:border-none">
-        <button
-          onClick={() => setOpen(isActive ? null : i)}
-          className={`w-full flex justify-between items-center p-5 text-left transition ${
-            isActive ? "bg-[#f94735]/10" : "hover:bg-gray-50"
-          }`}
-        >
-          <span
-            className={`font-semibold text-base md:text-lg ${
-              isActive ? "text-[#f94735]" : "text-[#0e1d34]"
-            }`}
-          >
-            {item.q}
-          </span>
+              return (
+                <div key={i} className="border-b last:border-none">
+                  <button
+                    onClick={() => setOpen(isActive ? null : i)}
+                    className={`w-full flex justify-between items-center p-5 text-left transition ${
+                      isActive ? "bg-[#f94735]/10" : "hover:bg-gray-50"
+                    }`}
+                  >
+                    <span
+                      className={`font-semibold ${
+                        isActive ? "text-[#f94735]" : "text-[#0e1d34]"
+                      }`}
+                    >
+                      {item.q}
+                    </span>
 
-          {/* Icon */}
-          <div
-            className={`w-8 h-8 flex items-center justify-center rounded-full border transition-all duration-300 ${
-              isActive
-                ? "bg-[#f94735] text-white rotate-180"
-                : "text-[#0e1d34]"
-            }`}
-          >
-            +
+                    <div
+                      className={`w-8 h-8 flex items-center justify-center rounded-full border ${
+                        isActive
+                          ? "bg-[#f94735] text-white rotate-180"
+                          : ""
+                      }`}
+                    >
+                      +
+                    </div>
+                  </button>
+
+                  <div
+                    className={`px-5 overflow-hidden transition-all ${
+                      isActive ? "max-h-40 pb-5" : "max-h-0"
+                    }`}
+                  >
+                    <p className="text-gray-500">{item.a}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
-        </button>
-
-        {/* Answer with animation */}
-        <div
-          className={`px-5 overflow-hidden transition-all duration-300 ${
-            isActive ? "max-h-40 pb-5" : "max-h-0"
-          }`}
-        >
-          <p className="text-gray-500 leading-relaxed">
-            {item.a}
-          </p>
-        </div>
-      </div>
-    );
-  })}
-</div>
 
         </div>
       </div>
