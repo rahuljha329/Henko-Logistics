@@ -30,6 +30,8 @@ const HomeFaq = () => {
     },
    
     {
+
+
       question: "How can I track my logistic shipment?",
       answer: "You can track your shipment in real-time using our specialized logistics dashboard by entering your unique tracking ID."
     },
@@ -98,10 +100,8 @@ const HomeFaq = () => {
           </p>
         </div>
   
-
         <div className="grid lg:grid-cols-12 gap-12 items-start">
           
-          {/* FAQ Accordion Side */}
           <div className="lg:col-span-7 space-y-4 min-h-[550px]">
             {currentFaqs.map((item, index) => (
               <div
@@ -155,7 +155,6 @@ const HomeFaq = () => {
                   <p className="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-black mb-3 ml-1">
                     Let me know
                   </p>
-
                   <div className="relative group">
                     <input
                       type="text"

@@ -676,8 +676,6 @@ const Navbar = () => {
             ))}
           </div>
 
-
-
           {/* Buttons */}
 
           <div className="hidden md:flex gap-3">
