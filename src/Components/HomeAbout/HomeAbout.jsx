@@ -1,6 +1,8 @@
 import React from 'react';
 import { ArrowRight, Phone, Check } from 'lucide-react';
 import { Link } from "react-router-dom";
+import aboutMain from "../../assets/aboutimg.png";
+import aboutOverlay from "../../assets/aboutimg2.png"; // 👈 second image
 
 const HomeAbout = () => {
   return (
@@ -26,7 +28,7 @@ const HomeAbout = () => {
             {/* Description */}
             <p className="text-gray-600 text-lg leading-relaxed max-w-xl">
               We provide advanced logistics solutions with smart tracking and efficient delivery systems.  
-              Our technology-driven approach ensures faster, safer, and more reliable transportation worldwide.
+              Our technology-driven approach ensures faster, safe safer, and more reliable transportation worldwide.
             </p>
 
             {/* Features */}
@@ -78,41 +80,41 @@ const HomeAbout = () => {
             </div>
           </div>
 
-          {/* Right Images */}
-          <div className="flex-1 relative">
-            
-            {/* Main Image */}
-            <div className="relative z-10 rounded-tl-[100px] rounded-br-[100px] overflow-hidden border-8 border-white shadow-[0_15px_50px_rgba(0,0,0,0.2)]">
-              <img 
-                src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=800"
-                alt=""
-                className="w-full object-cover hover:scale-105 transition duration-500"
-              />
-            </div>
-            
-            {/* Overlay Image */}
-            <div className="absolute -bottom-12 right-0 w-2/3 z-20 rounded-tl-[50px] rounded-br-[50px] overflow-hidden border-8 border-white shadow-2xl hidden md:block">
-              <img 
-                src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&q=80&w=600"
-                alt=""
-                className="w-full object-cover hover:scale-105 transition duration-500"
-              />
-            </div>
+                  {/* Right Images */}
+                 <div className="flex-1 relative">
+                                  
+                      {/* Main Image */}
+                      <div className="relative z-10 rounded-tl-[100px] rounded-br-[100px] overflow-hidden border-8 border-white shadow-[0_15px_50px_rgba(0,0,0,0.2)]">
+                        <img 
+                          src={aboutMain}   // ✅ main image
+                          alt="Main"
+                          className="w-full h-[400px] object-cover hover:scale-105 transition duration-500"
+                        />
+                      </div>
 
-            {/* Experience Badge */}
-            <div className="absolute bottom-0 left-0 bg-gradient-to-r from-[#f94735] to-[#ff6a4d] text-white p-6 rounded-tr-[50px] z-30 shadow-xl">
-              <p className="text-5xl font-black">20</p>
-              <p className="text-sm font-bold uppercase leading-tight">
-                Years of Experience
-              </p>
-            </div>
+                      {/* Overlay Image */}
+                      <div className="absolute -bottom-12 right-0 w-2/3 z-20 rounded-tl-[50px] rounded-br-[50px] overflow-hidden border-8 border-white shadow-2xl hidden md:block">
+                        <img 
+                          src={aboutOverlay}   // ✅ different image
+                          alt="Overlay"
+                          className="w-full h-[250px] object-cover hover:scale-105 transition duration-500"
+                        />
+                      </div>
 
-          </div>
+                  {/* Experience Badge */}
+                  <div className="absolute bottom-0 left-0 bg-gradient-to-r from-[#f94735] to-[#ff6a4d] text-white p-6 rounded-tr-[50px] z-30 shadow-xl">
+                    <p className="text-5xl font-black">20</p>
+                    <p className="text-sm font-bold uppercase leading-tight">
+                      Years of Experience
+                    </p>
+                  </div>
 
-        </div>
-      </div>
-    </section>
-  );
-};
+                  </div>
 
-export default HomeAbout;
+                </div>
+              </div>
+            </section>
+          );
+        };
+
+        export default HomeAbout;
