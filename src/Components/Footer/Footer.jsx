@@ -23,6 +23,9 @@ const Footer = () => {
     { name: 'Services', href: '/services' },
     { name: 'Tracking', href: '/tracking' },
     { name: 'Contact', href: '/contact' },
+    { name: 'Privacy Policy', href: '/privacypolicy' },
+     { name: 'Terms & Conditions', href: '/terms-conditions' }
+
   ];
 
   const services = [
@@ -36,11 +39,6 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-
-
-
-
-    
     { icon: FaFacebookF, href: '#' },
     { icon: FaTwitter, href: '#' },
     { icon: FaLinkedinIn, href: '#' },
@@ -88,8 +86,7 @@ const Footer = () => {
               <a 
                 key={i} 
                 href={link.href} 
-                className="flex items-center gap-1 hover:text-orange-500 mb-2 transition-colors"
-              >
+                className="flex items-center gap-1 hover:text-orange-500 mb-2 transition-colors">
                 <ChevronRight size={14} /> {link.name}
               </a>
             ))}
@@ -103,8 +100,7 @@ const Footer = () => {
                 <a 
                   key={i} 
                   href={item.href} 
-                  className="flex items-center gap-1 hover:text-orange-500 transition-colors"
-                >
+                  className="flex items-center gap-1 hover:text-orange-500 transition-colors">
                   <ChevronRight size={14} /> {item.name}
                 </a>
               ))}
@@ -114,8 +110,7 @@ const Footer = () => {
                 <a 
                   key={i} 
                   href={item.href} 
-                  className="flex items-center gap-1 hover:text-orange-500 transition-colors"
-                >
+                  className="flex items-center gap-1 hover:text-orange-500 transition-colors">
                   <ChevronRight size={14} /> {item.name}
                 </a>
               ))}

@@ -13,6 +13,8 @@ import ContactPage from './Pages/ContactPage'
 import WareHousingSolutionPage from './Pages/WareHousingSolutionPage'
 import ExpressDeliveryPage from './Pages/ExpressDeliveryPage'
 import TransportPage from './Pages/TransportPage'
+import PrivacyPolicyPage from './Pages/PrivacyPolicyPage'
+import TermsBannerPage from './Pages/TermsBannerPage'
 
 
 function App() {
@@ -31,6 +33,9 @@ function App() {
 
         <Route path='/about' element={<AboutPage />} />
         <Route path='/contact' element={<ContactPage />} />
+          <Route path='/PrivacyPolicy' element={<PrivacyPolicyPage />} />
+          <Route path="/terms-conditions" element={<TermsBannerPage />} />
+
       </Routes>
     </>
   )
