@@ -425,7 +425,6 @@
 
 // export default Navbar;
 
-
 // components/Navbar.jsx
 import React, { useState } from 'react';
 import { 
@@ -456,14 +455,14 @@ const Navbar = () => {
     { name: 'Services', href: '/services', hasDropdown: true },
     { name: 'Resources', href: '/resources', hasDropdown: true },
     { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' }, // Added Contact as menu item
   ];
 
   const serviceItems = [
     { name: "Air Freight", link: "/service-air-freight", icon: Plane },
     { name: "Sea Freight", link: "/service-sea-freight", icon: Ship },
-    { name: "Warehousing Solutions", link: "/service-warehousing", icon: Package },
+    { name: "Warehousing Solutions", link: "/service-warehousing-solutions", icon: Package },
     { name: "Express Delivery", link: "/service-express", icon: TruckIcon },
-    { name: "Clearance", link: "/service-clearance", icon: Scale },
     { name: "Transport", link: "/service-transport", icon: TruckIcon },
   ];
 
@@ -615,12 +614,8 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Buttons */}
+          {/* Buttons - Removed Contact button, only Get Quote remains */}
           <div className="hidden md:flex gap-3">
-            <button className="bg-red-500 text-white px-4 py-2 rounded flex items-center gap-2">
-              <Phone className="w-4 h-4" />
-              Contact
-            </button>
             <button
               className="px-5 py-2 rounded-lg transition-all hover:bg-opacity-10"
               style={{ border: `2px solid ${colors.primary}`, color: colors.primary }}
@@ -715,15 +710,8 @@ const Navbar = () => {
               </div>
             ))}
 
-            {/* Mobile Buttons */}
+            {/* Mobile Buttons - Only Get Quote button remains */}
             <div className="flex flex-col gap-3 pt-4 px-3">
-              <button
-                className="text-white px-5 py-2 rounded-lg flex items-center justify-center gap-2"
-                style={{ backgroundColor: colors.primary }}
-              >
-                <Phone className="w-4 h-4" />
-                Contact
-              </button>
               <button
                 className="px-5 py-2 rounded-lg"
                 style={{ border: `2px solid ${colors.primary}`, color: colors.primary }}
