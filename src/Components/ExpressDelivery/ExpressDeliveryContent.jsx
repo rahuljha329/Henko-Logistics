@@ -140,7 +140,7 @@ export default function ExpressDeliveryContent() {
           {/* Heading + 3 Paragraphs */}
           <div>
             <h2 className="text-2xl font-bold text-[#0e1d34] mb-3">
-             Ware Housing Solutions
+             Express Delivery 
             </h2>
 
             <p className="text-gray-500 mb-4">
