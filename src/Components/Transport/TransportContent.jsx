@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Mail, Phone, MapPin, FileText } from "lucide-react";
 
-export default function AirFreightContent() {
+export default function TransportContent() {
   const [open, setOpen] = useState(0);
   const [activeService, setActiveService] = useState(0); // 👈 NEW
 
@@ -15,20 +15,20 @@ export default function AirFreightContent() {
 
   const faqs = [
     {
-      q: "Can i specify a delivery date when ordering?",
-      a: "We are committed to providing our customers with exceptional service while offering our employees the best training."
+      q: "What types of transport services do you offer?",
+      a: "We offer road transport services including full truckload (FTL), part truckload (PTL), and last-mile delivery."
     },
     {
       q: "How can i track my shipments?",
       a: "You can track shipments in real-time using our tracking system."
     },
     {
-      q: "How long does air freight delivery take?",
-      a: "Delivery typically takes 1–5 days depending on destination and service type."
+      q: "Is your transport service available nationwide?",
+      a: "Yes, we have a strong network that covers multiple cities and regions across the country."
     },
     {
-      q: "Is air freight expensive?",
-      a: "It is costlier than sea freight but ideal for urgent and high-value shipments."
+      q: "Are goods insured during transport?",
+      a: "Yes, we ensure proper safety measures and can provide insurance options for shipments."
     }
   ];
 
@@ -64,9 +64,9 @@ export default function AirFreightContent() {
             </div>
           </div>
 
-         
+          {/* बाकी code same hai ↓ */}
 
-        
+          {/* Contact Info */}
           <div className="bg-white shadow rounded">
             <h3 className="bg-[#0e1d34] text-white p-4 font-semibold">
               CONTACT INFO
@@ -99,7 +99,7 @@ export default function AirFreightContent() {
             </div>
           </div>
 
-         
+          {/* Brochures */}
           <div className="bg-white shadow rounded">
             <h3 className="bg-[#0e1d34] text-white p-4 font-semibold">
               BROCHURES
@@ -118,7 +118,7 @@ export default function AirFreightContent() {
             </div>
           </div>
 
-        
+          {/* Help Box */}
           <div className="bg-[#0e1d34] text-white p-6 rounded text-center">
             <h3 className="text-lg font-bold mb-4">How Can We Help?</h3>
             <p className="text-sm mb-2">📞 (+44) 123 456 789</p>
@@ -127,33 +127,33 @@ export default function AirFreightContent() {
 
         </div>
 
-       
+        {/* ================= RIGHT CONTENT ================= */}
         <div className="md:col-span-2 space-y-8">
 
-         
+          {/* Image */}
           <img
-            src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?w=2400&q=80"
+            src="https://images.pexels.com/photos/1606957/pexels-photo-1606957.jpeg"
             className="w-full h-[520px] object-cover rounded"
             alt="warehouse"
           />
 
-         
+          {/* Title + Text */}
           <div>
             <h2 className="text-2xl font-bold text-[#0e1d34] mb-3">
-              Air Freight
+             Transport
             </h2>
             <p className="text-gray-500 mb-4">
-             Air freight is the fastest and most reliable way to move goods across long distances, ensuring timely delivery for urgent and high-value shipments. Our air freight services are designed to provide seamless logistics solutions with global coverage, advanced tracking systems, and efficient handling at every stage of the journey.
+             Transport services are a vital part of the logistics chain, ensuring the smooth movement of goods from one location to another. Efficient transportation helps businesses maintain timely deliveries, reduce costs, and improve overall supply chain performance. With the right transport network, goods can be delivered safely and on schedule across cities and regions.
             </p>
             <p className="text-gray-500 mb-4">
-                We work with a strong network of airline partners to offer flexible scheduling, competitive pricing, and priority cargo handling. Whether it’s small parcels or large commercial consignments, we ensure your shipments are delivered safely, securely, and on time. Our team manages everything from documentation and customs clearance to final delivery, giving you a hassle-free experience.
+                Our transport services are designed to provide reliable and flexible solutions for all types of cargo. Whether it’s small shipments or bulk consignments, we offer a wide range of vehicles and transport options to meet your specific requirements. Our strong network enables seamless delivery across local, regional, and national routes.
             </p>
             <p className="text-gray-500">
-              With a focus on speed, accuracy, and customer satisfaction, our air freight solutions are ideal for businesses that demand efficiency and reliability. We continuously optimize our processes to reduce transit times and ensure your cargo reaches its destination without delays.
+              We focus on safety, efficiency, and timely delivery in every operation. Our experienced drivers, well-maintained fleet, and optimized route planning ensure that your goods reach their destination without delays or damage. We also provide real-time tracking so you can stay updated on your shipment status.
             </p>
           </div>
 
-         
+          {/* Feature Cards */}
           <div className="grid md:grid-cols-2 gap-6">
             {[1, 2].map((item, i) => (
               <div
@@ -181,12 +181,12 @@ export default function AirFreightContent() {
             ))}
           </div>
 
-        
+          {/* Paragraph */}
           <p className="text-gray-500">
-            We understand the importance of time-sensitive deliveries in today’s fast-paced world. Our air freight services are tailored to meet urgent shipping needs while maintaining the highest standards of safety and quality. From pickup to final delivery, we ensure complete transparency and real-time updates for your peace of mind.
+            In addition to transportation, we offer customized solutions such as scheduled deliveries, dedicated transport services, and last-mile delivery support. Our goal is to simplify your logistics operations and provide a hassle-free transport experience tailored to your business needs.
           </p>
 
-         
+          {/* FAQ */}
           <h3 className="text-2xl font-bold text-[#0e1d34] mb-4">
   Frequently Asked Questions
 </h3>
@@ -210,7 +210,7 @@ export default function AirFreightContent() {
             {item.q}
           </span>
 
-        
+          {/* Icon */}
           <div
             className={`w-8 h-8 flex items-center justify-center rounded-full border transition-all duration-300 ${
               isActive
@@ -222,7 +222,7 @@ export default function AirFreightContent() {
           </div>
         </button>
 
-      
+        {/* Answer with animation */}
         <div
           className={`px-5 overflow-hidden transition-all duration-300 ${
             isActive ? "max-h-40 pb-5" : "max-h-0"
