@@ -704,8 +704,6 @@ const Navbar = () => {
           </button>
         </div>
 
-
-
         {/* Mobile Menu */}
 
         {isOpen && (
@@ -722,9 +720,7 @@ const Navbar = () => {
 
                 className="block px-3 py-2"
 
-                onClick={() => setIsOpen(false)}
-
-              >
+                onClick={() => setIsOpen(false)}>
 
                 {link.name}
 
