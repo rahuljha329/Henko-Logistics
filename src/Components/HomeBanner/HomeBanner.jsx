@@ -222,8 +222,7 @@ const TrackingCard = () => {
   };
 
     return (
-    <div className="w-full max-w-[440px] bg-white/10 backdrop-blur-md rounded-[2rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] p-8 text-white border border-white/20">     
-        <div className="flex justify-between border-b border-white/20 mb-8 overflow-x-auto scrollbar-hide">
+     <div className="w-full max-w-[900px] min-h-[520px] bg-white/10 backdrop-blur-md rounded-[2rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] p-12 text-white border border-white/20 flex flex-col items-center justify-center text-center">       <div className="flex justify-between border-b border-white/20 mb-8 overflow-x-auto scrollbar-hide">
       {['Shipment Services', 'Schedules', 'Locations'].map((tab) => (
         <button
           key={tab}
@@ -315,7 +314,7 @@ const HomeBanner = () => {
             Connecting businesses to global markets with efficient delivery services 
             across all continents.
           </p>
-
+{/* 
      <form 
         onSubmit={handleEmailSubmit}
         className="flex w-full max-w-md h-[70px] rounded-2xl overflow-hidden shadow-2xl mb-2 border border-white/10 p-1.5 bg-white/5 backdrop-blur-md">
@@ -330,7 +329,7 @@ const HomeBanner = () => {
           className="px-10 bg-[#f94735] text-white font-black uppercase text-xs tracking-widest rounded-xl hover:bg-[#d83c2d] transition-all active:scale-95 shadow-lg shadow-red-600/20">
           Submit
         </button>
-      </form>
+      </form> */}
 
           <div className="flex items-center gap-4 md:gap-8 flex-wrap lg:flex-nowrap">
             {[

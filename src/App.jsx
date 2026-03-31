@@ -15,6 +15,7 @@ import ExpressDeliveryPage from './Pages/ExpressDeliveryPage'
 import TransportPage from './Pages/TransportPage'
 import PrivacyPolicyPage from './Pages/PrivacyPolicyPage'
 import TermsBannerPage from './Pages/TermsBannerPage'
+import CareerBannerPage from './Pages/CareerBannerPage'
 
 
 function App() {
@@ -33,8 +34,10 @@ function App() {
 
         <Route path='/about' element={<AboutPage />} />
         <Route path='/contact' element={<ContactPage />} />
-          <Route path='/PrivacyPolicy' element={<PrivacyPolicyPage />} />
-          <Route path="/terms-conditions" element={<TermsBannerPage />} />
+        <Route path='/PrivacyPolicy' element={<PrivacyPolicyPage />} />
+        <Route path="/terms-conditions" element={<TermsBannerPage />} />
+        <Route path="/CareerBanner" element={<CareerBannerPage />} />
+
 
       </Routes>
     </>

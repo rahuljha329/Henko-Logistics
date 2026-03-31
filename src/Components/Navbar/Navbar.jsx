@@ -475,6 +475,8 @@ const Navbar = () => {
 
     { name: "Blog", href: "/blog" },
 
+     { name: "Career", href: "/CareerBanner" },
+
   ];
 
   const serviceItems = [
