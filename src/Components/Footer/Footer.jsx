@@ -13,6 +13,7 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/f
 // Logos
 import largeLogo from "../../assets/Henko-logo-large.png";
 import mobileLogo from "../../assets/henko-logo-mobile.png";
+import logo from "../../assets/vaanilivelogo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -23,6 +24,9 @@ const Footer = () => {
     { name: 'Services', href: '/services' },
     { name: 'Tracking', href: '/tracking' },
     { name: 'Contact', href: '/contact' },
+    { name: 'Privacy Policy', href: '/privacypolicy' },
+     { name: 'Terms & Conditions', href: '/terms-conditions' }
+
   ];
 
   const services = [
@@ -36,11 +40,6 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-
-
-
-
-    
     { icon: FaFacebookF, href: '#' },
     { icon: FaTwitter, href: '#' },
     { icon: FaLinkedinIn, href: '#' },
@@ -88,8 +87,7 @@ const Footer = () => {
               <a 
                 key={i} 
                 href={link.href} 
-                className="flex items-center gap-1 hover:text-orange-500 mb-2 transition-colors"
-              >
+                className="flex items-center gap-1 hover:text-orange-500 mb-2 transition-colors">
                 <ChevronRight size={14} /> {link.name}
               </a>
             ))}
@@ -103,8 +101,7 @@ const Footer = () => {
                 <a 
                   key={i} 
                   href={item.href} 
-                  className="flex items-center gap-1 hover:text-orange-500 transition-colors"
-                >
+                  className="flex items-center gap-1 hover:text-orange-500 transition-colors">
                   <ChevronRight size={14} /> {item.name}
                 </a>
               ))}
@@ -114,8 +111,7 @@ const Footer = () => {
                 <a 
                   key={i} 
                   href={item.href} 
-                  className="flex items-center gap-1 hover:text-orange-500 transition-colors"
-                >
+                  className="flex items-center gap-1 hover:text-orange-500 transition-colors">
                   <ChevronRight size={14} /> {item.name}
                 </a>
               ))}
@@ -172,9 +168,8 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* SUBSCRIBE SECTION - Spanning across first 3 columns, aligned with contact info */}
-        <div className="grid md:grid-cols-4 gap-8 mt-12 pt-8 border-t border-gray-700">
-          {/* Subscribe - Takes first 3 columns */}
+        SUBSCRIBE SECTION - Spanning across first 3 columns, aligned with contact info
+        {/* <div className="grid md:grid-cols-4 gap-8 mt-12 pt-8 border-t border-gray-700">
           <div className="lg:col-span-3">
             <div className="grid md:grid-cols-3 gap-8">
               <div className="md:col-span-1">
@@ -200,17 +195,26 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          
-          {/* Empty div to maintain 4th column alignment with contact info */}
+      
           <div className="hidden lg:block"></div>
-        </div>
+        </div> */}
 
-        {/* Bottom */}
-        <div className="text-center text-sm mt-8 pt-6 border-t border-gray-700">
-          © {currentYear} HENKO LOGISTICS. All rights reserved.
-        </div>
-      </div>
-    </footer>
+       {/* Bottom */}
+</div> {/* 👈 ye closing div missing tha (max-w container ka) */}
+
+<div className="text-center text-[13px] mt-8 pt-4 border-t border-gray-700 text-gray-400">
+  <p className="flex items-center justify-center gap-2 flex-wrap tracking-wide">
+    Copyright © {currentYear} HENKO LOGISTICS. All rights reserved.|
+    <span>Design & Developed by</span>
+    <img 
+      src={logo} 
+      alt="Yaani Live" 
+      className="h-4 object-contain"
+    />
+  </p>
+</div>
+
+</footer>
   );
 };
 

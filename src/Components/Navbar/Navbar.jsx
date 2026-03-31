@@ -477,6 +477,8 @@ const Navbar = () => {
     { name:"Career" , href:"/career"},
      { name:"Contact" , href:"/contact"},
 
+     { name: "Career", href: "/CareerBanner" },
+
   ];
 
   const serviceItems = [
@@ -706,8 +708,6 @@ const Navbar = () => {
           </button>
         </div>
 
-
-
         {/* Mobile Menu */}
 
         {isOpen && (
@@ -724,9 +724,7 @@ const Navbar = () => {
 
                 className="block px-3 py-2"
 
-                onClick={() => setIsOpen(false)}
-
-              >
+                onClick={() => setIsOpen(false)}>
 
                 {link.name}
 

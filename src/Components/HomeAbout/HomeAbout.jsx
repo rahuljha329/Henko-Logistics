@@ -34,6 +34,7 @@ const HomeAbout = () => {
                 "Container Freight",
                 "Railroad Shipping",
                 "Warehousing Solutions"
+                
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-3 group">
                   <div className="w-6 h-6 bg-[#f94735] flex items-center justify-center rounded-md shadow-md group-hover:scale-110 transition">
@@ -48,9 +49,8 @@ const HomeAbout = () => {
 
             <div className="flex flex-wrap items-center gap-6 pt-10 border-t border-gray-200">
               <Link
-                to="/contact"
-                className="flex items-center gap-2 bg-[#0e1d34] text-white px-8 py-4 rounded-lg font-bold shadow-lg hover:bg-[#091524] hover:scale-105 transition-all"
-              >
+                to="/Contact"
+                className="flex items-center gap-2 bg-[#0e1d34] text-white px-8 py-4 rounded-lg font-bold shadow-lg hover:bg-[#091524] hover:scale-105 transition-all">
                 Contact Us <ArrowRight size={18} />
               </Link>
 
@@ -73,16 +73,14 @@ const HomeAbout = () => {
               <img
                 src={aboutMain}
                 alt="Main"
-                className="w-full h-[400px] object-cover hover:scale-105 transition duration-500"
-              />
+                className="w-full h-[400px] object-cover hover:scale-105 transition duration-500"/>
             </div>
 
             <div className="absolute -bottom-12 right-0 w-2/3 z-20 rounded-tl-[50px] rounded-br-[50px] overflow-hidden border-8 border-white shadow-2xl hidden md:block">
               <img
                 src={aboutOverlay}
                 alt="Overlay"
-                className="w-full h-[250px] object-cover hover:scale-105 transition duration-500"
-              />
+                className="w-full h-[250px] object-cover hover:scale-105 transition duration-500"/>
             </div>
 
             <div className="absolute bottom-0 left-0 bg-gradient-to-r from-[#f94735] to-[#ff6a4d] text-white p-6 rounded-tr-[50px] z-30 shadow-xl">
