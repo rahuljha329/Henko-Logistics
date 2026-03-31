@@ -13,6 +13,7 @@ import ContactPage from './Pages/ContactPage'
 import WareHousingSolutionPage from './Pages/WareHousingSolutionPage'
 import ExpressDeliveryPage from './Pages/ExpressDeliveryPage'
 import TransportPage from './Pages/TransportPage'
+import AdminDashboard from './Pages/AdminDashboard'
 
 
 function App() {
@@ -28,9 +29,10 @@ function App() {
         <Route path='/service-warehousing-solutions' element={<WareHousingSolutionPage />} />
         <Route path='/service-express' element={<ExpressDeliveryPage />} />
         <Route path='/service-transport' element={<TransportPage />} />
-
+      
         <Route path='/about' element={<AboutPage />} />
         <Route path='/contact' element={<ContactPage />} />
+        <Route path='admin-dashboard' element={<AdminDashboard />}/>
       </Routes>
     </>
   )
