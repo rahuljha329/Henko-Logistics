@@ -406,7 +406,7 @@
 
 import React, { useState } from "react";
 
-import { Link } from "react-router-dom";
+import { href, Link } from "react-router-dom";
 
 import {
 
@@ -474,6 +474,8 @@ const Navbar = () => {
     { name: "Resources", href: "/resources", hasDropdown: true },
 
     { name: "Blog", href: "/blog" },
+    { name:"Career" , href:"/career"},
+     { name:"Contact" , href:"/contact"},
 
      { name: "Career", href: "/CareerBanner" },
 
@@ -682,13 +684,13 @@ const Navbar = () => {
 
           <div className="hidden md:flex gap-3">
 
-            <button className="bg-red-500 text-white px-4 py-2 rounded flex items-center gap-2">
+            {/* <button className="bg-red-500 text-white px-4 py-2 rounded flex items-center gap-2">
 
               <Phone className="w-4 h-4" />
 
               Contact
 
-            </button>
+            </button> */}
 
             <button className="border border-red-500 text-red-500 px-4 py-2 rounded">
 

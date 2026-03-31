@@ -16,6 +16,8 @@ import TransportPage from './Pages/TransportPage'
 import PrivacyPolicyPage from './Pages/PrivacyPolicyPage'
 import TermsBannerPage from './Pages/TermsBannerPage'
 import CareerBannerPage from './Pages/CareerBannerPage'
+import AdminDashboard from './Pages/AdminDashboard'
+import BlogPage from './Pages/BlogPage'
 
 
 function App() {
@@ -31,7 +33,7 @@ function App() {
         <Route path='/service-warehousing-solutions' element={<WareHousingSolutionPage />} />
         <Route path='/service-express' element={<ExpressDeliveryPage />} />
         <Route path='/service-transport' element={<TransportPage />} />
-
+      
         <Route path='/about' element={<AboutPage />} />
         <Route path='/contact' element={<ContactPage />} />
         <Route path='/PrivacyPolicy' element={<PrivacyPolicyPage />} />
@@ -39,6 +41,9 @@ function App() {
         <Route path="/CareerBanner" element={<CareerBannerPage />} />
 
 
+        <Route path='/blog' element={<BlogPage />} />
+
+        <Route path='admin-dashboard' element={<AdminDashboard />}/>
       </Routes>
     </>
   )
