@@ -23,7 +23,7 @@ const HomeAction = () => {
 
         <div className="flex justify-center">
           <a 
-            href="#contact-us"
+            href="/contact"
             className="inline-block px-10 py-2.5 text-sm md:text-base font-semibold border border-white rounded-md 
                        hover:bg-white hover:text-slate-900 transition-colors duration-300 
                        focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-900">

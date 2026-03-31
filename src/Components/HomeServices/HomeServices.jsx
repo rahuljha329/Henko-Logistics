@@ -36,7 +36,7 @@ const HomeServices = () => {
     title: "Air Freight",
    description: "Fast and reliable air cargo solutions for urgent shipments worldwide. We ensure timely delivery with advanced tracking and secure handling.",
     image: home1,   
-    path: "/services/air-freight"
+    path: "/service-air-freight"
   },
   {
     id: 2,
@@ -44,7 +44,7 @@ const HomeServices = () => {
     title: "Sea Freight",
     description: "Cost-effective ocean freight services for large-scale shipments. Ideal for international trade with flexible container options and global reach.",
     image: home2,   
-    path: "/services/sea-freight"
+    path: "/service-sea-freight"
   },
   {
     id: 3,
@@ -52,7 +52,7 @@ const HomeServices = () => {
     title: "Warehousing Solutions",
     description: "Secure storage facilities with modern inventory management systems. We help streamline your supply chain with efficient warehousing solutions.",
     image: home3,   
-    path: "/services/warehousing"
+    path: "/service-warehousing-solutions"
   },
   {
     id: 4,
@@ -60,23 +60,16 @@ const HomeServices = () => {
     title: "Express Delivery",
    description: "Rapid door-to-door delivery services with real-time tracking. Perfect for urgent shipments requiring speed, safety, and reliability.",
     image: home4,   
-    path: "/services/express-delivery"
+    path: "/service-express"
   },
-  {
-    id: 5,
-    tag: "SERVICE FIVE",
-    title: "Customs Clearance",
-   description: "Hassle-free customs documentation and compliance support. We ensure smooth and delay-free international shipping processes.",
-    image: home5,   
-    path: "/services/customs-clearance"
-  },
+ 
   {
     id: 6,
     tag: "SERVICE SIX",
     title: "Land Transport",
     description: "Reliable road transportation services for regional and national delivery. Flexible trucking solutions tailored to your business needs.",
     image: home6,   
-    path: "/services/land-transport"
+    path: "/service-transport"
   }
 ];
 
