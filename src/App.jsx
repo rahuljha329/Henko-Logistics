@@ -14,6 +14,7 @@ import WareHousingSolutionPage from './Pages/WareHousingSolutionPage'
 import ExpressDeliveryPage from './Pages/ExpressDeliveryPage'
 import TransportPage from './Pages/TransportPage'
 import AdminDashboard from './Pages/AdminDashboard'
+import BlogPage from './Pages/BlogPage'
 
 
 function App() {
@@ -32,6 +33,8 @@ function App() {
       
         <Route path='/about' element={<AboutPage />} />
         <Route path='/contact' element={<ContactPage />} />
+        <Route path='/blog' element={<BlogPage />} />
+
         <Route path='admin-dashboard' element={<AdminDashboard />}/>
       </Routes>
     </>
