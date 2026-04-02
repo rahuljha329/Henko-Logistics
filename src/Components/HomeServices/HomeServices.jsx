@@ -1,5 +1,7 @@
 import React from 'react';
 import { ChevronRight, ArrowRight } from 'lucide-react';
+import { Link } from "react-router-dom";
+
 import home1 from "../../assets/home1.png";
 import home2 from "../../assets/home2.png";
 import home3 from "../../assets/home3.png";
@@ -29,13 +31,13 @@ const HomeServices = () => {
     e.target.src = "https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&q=80&w=800";
   };
 
-  const services = [
+ const services = [
   {
     id: 1,
     tag: "SERVICE ONE",
     title: "Air Freight",
-   description: "Fast and reliable air cargo solutions for urgent shipments worldwide. We ensure timely delivery with advanced tracking and secure handling.",
-    image: home1,   
+    description: "Fast and reliable air cargo solutions for urgent shipments worldwide. We ensure timely delivery with advanced tracking and secure handling.",
+    image: home1,
     path: "/service-air-freight"
   },
   {
@@ -43,32 +45,31 @@ const HomeServices = () => {
     tag: "SERVICE TWO",
     title: "Sea Freight",
     description: "Cost-effective ocean freight services for large-scale shipments. Ideal for international trade with flexible container options and global reach.",
-    image: home2,   
+    image: home2,
     path: "/service-sea-freight"
   },
   {
     id: 3,
     tag: "SERVICE THREE",
-    title: "Warehousing Solutions",
+    title: "Warehousing",
     description: "Secure storage facilities with modern inventory management systems. We help streamline your supply chain with efficient warehousing solutions.",
-    image: home3,   
+    image: home3,
     path: "/service-warehousing-solutions"
   },
   {
     id: 4,
     tag: "SERVICE FOUR",
     title: "Express Delivery",
-   description: "Rapid door-to-door delivery services with real-time tracking. Perfect for urgent shipments requiring speed, safety, and reliability.",
-    image: home4,   
+    description: "Rapid door-to-door delivery services with real-time tracking. Perfect for urgent shipments requiring speed, safety, and reliability.",
+    image: home4,
     path: "/service-express"
   },
- 
   {
-    id: 6,
-    tag: "SERVICE SIX",
-    title: "Land Transport",
-    description: "Reliable road transportation services for regional and national delivery. Flexible trucking solutions tailored to your business needs.",
-    image: home6,   
+    id: 5,
+    tag: "SERVICE FIVE",
+    title: "Transport",
+    description: "Reliable and efficient transportation services designed to ensure safe and timely delivery of goods across local and national routes. We offer flexible logistics solutions tailored to meet your business needs.",
+    image: home5,
     path: "/service-transport"
   }
 ];

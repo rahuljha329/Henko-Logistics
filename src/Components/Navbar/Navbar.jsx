@@ -468,13 +468,21 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "/", icon: Home },
-    { name: "About Us", href: "/about", icon: Info },
-    { name: "Services", href: "/services", hasDropdown: true, icon: Truck },
-    { name: "Resources", href: "/resources", hasDropdown: true, icon: Database },
-    { name: "Blog", href: "/blog", icon: Newspaper },
-    { name: "Career", href: "/career", icon: Briefcase },
-    { name: "Contact", href: "/contact", icon: Mail },
+
+    { name: "Home", href: "/" },
+
+    { name: "About Us", href: "/about" },
+
+    { name: "Services", href: "/services", hasDropdown: true },
+
+    { name: "Resources", href: "/resources", hasDropdown: true },
+
+    { name: "Blog", href: "/blog" },
+    { name:"Career" , href:"/CareerBanner"},
+     { name:"Contact" , href:"/contact"},
+
+   
+
   ];
 
   const serviceItems = [
@@ -648,98 +656,25 @@ const Navbar = () => {
         <div className={`md:hidden transition-all duration-300 overflow-hidden ${isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
           <div className="py-4 space-y-2 border-t border-gray-100">
             {navLinks.map((link) => (
-              <div key={link.name}>
-                {link.hasDropdown ? (
-                  <>
-                    <button
-                      onClick={() => toggleMobileDropdown(link.name === "Services" ? "services" : "resources")}
-                      className="flex items-center justify-between w-full px-3 py-3 rounded-lg hover:bg-gray-50 transition-colors duration-200"
-                      style={{ color: colors.secondary }}
-                    >
-                      <div className="flex items-center gap-3">
-                        <link.icon className="w-5 h-5" style={{ color: colors.primary }} />
-                        <span className="font-medium">{link.name}</span>
-                      </div>
-                      <ChevronRight className={`w-4 h-4 transition-transform duration-200 ${(link.name === "Services" ? mobileServicesOpen : mobileResourcesOpen) ? 'rotate-90' : ''}`} />
-                    </button>
 
-                    {/* Mobile Services Submenu */}
-                    {link.name === "Services" && mobileServicesOpen && (
-                      <div className="ml-8 pl-4 border-l-2 border-[#f94735] space-y-1 mt-1">
-                        {serviceItems.map((item) => (
-                          <Link
-                            key={item.name}
-                            to={item.link}
-                            className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-50 transition-colors duration-150"
-                            onClick={closeAll}
-                          >
-                            <item.icon className="w-4 h-4" style={{ color: colors.primary }} />
-                            <span className="text-sm text-gray-600">{item.name}</span>
-                          </Link>
-                        ))}
-                      </div>
-                    )}
+              <Link
 
-                    {/* Mobile Resources Submenu */}
-                    {link.name === "Resources" && mobileResourcesOpen && (
-                      <div className="ml-8 pl-4 border-l-2 border-[#f94735] space-y-1 mt-1">
-                        {resourceItems.map((item) => (
-                          <Link
-                            key={item.name}
-                            to={item.link}
-                            className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-50 transition-colors duration-150"
-                            onClick={closeAll}
-                          >
-                            <item.icon className="w-4 h-4" style={{ color: colors.primary }} />
-                            <div>
-                              <div className="text-sm text-gray-600">{item.name}</div>
-                              <div className="text-xs text-gray-400">{item.description}</div>
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <Link
-                    to={link.href}
-                    className="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-gray-50 transition-colors duration-200"
-                    onClick={closeAll}
-                    style={{ color: colors.secondary }}
-                  >
-                    <link.icon className="w-5 h-5" style={{ color: colors.primary }} />
-                    <span className="font-medium">{link.name}</span>
-                  </Link>
-                )}
-              </div>
+                key={link.name}
+
+                to={link.href}
+
+                className="block px-3 py-2"
+
+                onClick={() => setIsOpen(false)}
+
+              >
+
+                {link.name}
+
+              </Link>
+
             ))}
 
-            {/* Mobile Quote Button */}
-            <div className="pt-4 mt-2 border-t border-gray-100">
-              <button
-                className="w-full px-4 py-3 rounded-lg font-medium transition-all duration-200"
-                style={{ backgroundColor: colors.primary, color: "white" }}
-                onClick={closeAll}
-              >
-                Get Quote
-              </button>
-            </div>
-
-            {/* Mobile Contact Info */}
-            <div className="pt-4 space-y-2 text-sm text-gray-500">
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4" style={{ color: colors.primary }} />
-                <span>+91 1800 123 4567</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" style={{ color: colors.primary }} />
-                <span>24/7 Support</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4" style={{ color: colors.primary }} />
-                <span>Pan India Network</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
