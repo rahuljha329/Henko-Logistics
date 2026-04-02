@@ -18,6 +18,7 @@ import TermsBannerPage from './Pages/TermsBannerPage'
 import CareerBannerPage from './Pages/CareerBannerPage'
 import AdminDashboard from './Pages/AdminDashboard'
 import BlogPage from './Pages/BlogPage'
+import LoginPage from './Pages/LoginPage'
 
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
         <Route path='/blog' element={<BlogPage />} />
 
         <Route path='admin-dashboard' element={<AdminDashboard />}/>
+        <Route path='/LoginPage'  element={<LoginPage />}/>
       </Routes>
     </>
   )
